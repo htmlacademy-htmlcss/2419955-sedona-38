@@ -138,21 +138,18 @@ h2{
 .facts-list1{
     background-image: url("../images/house.svg");
     background-repeat: no-repeat;
-    background-size: width="75" heihgt="72";
     text-align: center;
 }
 
 .facts-list2{
     background-image: url("../images/food.svg");
     background-repeat: no-repeat;
-    background-size: width="75" heihgt="72";
     text-align: center;
 }
 
 .facts-list3{
     background-image: url("../images/gift.svg");
     background-repeat: no-repeat;
-    background-size: width="75" heihgt="72";
     text-align: center;
 }
 
@@ -195,7 +192,6 @@ h2{
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
-    background-color: none;
     text-transform: uppercase;
 
 }
@@ -232,7 +228,6 @@ h2{
 .button-all-list{
     background-color: white;
     background-image: url("../images/cards.svg");
-    background-size: width="16" height="14";
     text-align: center;
     background-repeat: no-repeat;
 }
@@ -240,7 +235,6 @@ h2{
 .button-one-hotel{
     background-color: white;
     background-image: url("../images/one-card.svg");
-    background-size: width="16" height="14";
     text-align: center;
     background-repeat: no-repeat;
 }
@@ -248,13 +242,11 @@ h2{
 .button-list{
     background-color: white;
     background-image: url("../images/card-list.svg");
-    background-size: width="16" height="14";
     text-align: center;
     background-repeat: no-repeat;
 }
 
 .button-curent{
-    background-size: width="48" height="48";
     border: solid black 2px;
     border-radius: 4px;
 }
