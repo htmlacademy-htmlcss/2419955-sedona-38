@@ -695,6 +695,28 @@ h4 {
     margin: 0;
 }
 
+.navigation-user-item {
+    position: relative;
+}
+
+.navigation-user-link-favourite:after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #7DB54F;
+    right: 4px;
+    top: 11px;
+    left: 20px;
+    content: "12";
+    display: inline-block;
+    color: white;
+    font-size: 10px;
+}
+
+
+
+
 .breadcrumbs {
     display: flex;
     align-items: center;
