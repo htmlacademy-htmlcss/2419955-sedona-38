@@ -171,12 +171,6 @@ body {
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
   flex-grow: 1;
   flex-wrap: wrap;
   text-align: left;
@@ -195,7 +189,7 @@ body {
   height: 48px;
   background-color: #F2F2F2;
   border-radius: 4px;
-  padding: 12px 0 12px 24px;
+  padding: 12px 0 12px 20px;
   box-sizing: border-box;
   border: none;
   color: rgba(0, 0, 0, 1);
@@ -243,6 +237,7 @@ body {
   font-weight: 700;
   margin: 0 82px 0 0;
   position: relative;
+  padding: 0;
 }
 
 .form-label::after {
