@@ -54,6 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 1060px;
+  min-height: 50px;
   padding: 40px 70px 30px 70px;
 }
 
@@ -69,6 +70,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
+  margin-top: 8px;
 }
 
 .about-text {
@@ -177,6 +179,7 @@ body {
 }
 
 .field-group {
+  font-family: inherit;
   display: flex;
   position: relative;
   padding: 0;
@@ -193,6 +196,7 @@ body {
   box-sizing: border-box;
   border: none;
   color: rgba(0, 0, 0, 1);
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -215,6 +219,7 @@ body {
 .field[type="text"]:active {
   background-color: #E6E6E6;
   color: rgba(0, 0, 0, 1);
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -223,21 +228,26 @@ body {
 
 
 .toggle-adults-headline {
+  display: inline-block;
   font-family: inherit;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   margin: 0 46px 0 0;
+  max-width: 100px;
+  word-wrap: break-word;
 }
 
 .toggle-kids-headline {
+  display: inline-block;
   font-family: inherit;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  margin: 0 82px 0 0;
-  position: relative;
+  margin: 0 10px 0 0;
   padding: 0;
+  max-width: 60px;
+  word-wrap: break-word;
 }
 
 .form-label::after {
@@ -283,6 +293,7 @@ input[type="text"] {
 }
 
 .form-label {
+  font-family: inherit;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -297,10 +308,10 @@ input[type="text"] {
 
 .tooltip {
   position: relative;
+  margin-right: 46px;
 }
 
 .tooltip-toggle {
-  position: absolute;
   left: 10px;
   top: 0;
   width: 26px;
@@ -311,7 +322,6 @@ input[type="text"] {
   cursor: pointer;
   padding: 0;
   margin: 0;
-  display: block;
 }
 
 .tooltip-text {
@@ -319,25 +329,23 @@ input[type="text"] {
   background-color: #333333;
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.30);
   color: #ffffff;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   font-weight: normal;
   text-transform: none;
-  padding: 15px 18px 18px 22px;
+  padding: 18px 18px 22px 22px;
   border-radius: 10px;
-  display: block;
   width: 216px;
-  right: -150px;
-  top: -50px;
+  right: -115px;
+  top: -55px;
   transform: translateY(70%);
-  z-index: 1;
   display: none;
   text-align: left;
 }
 
 .form-label-icon {
-  position: relative;
-  padding-left: 16px;
+  align-self: center;
 }
 
 .tooltip-text:after {
@@ -346,7 +354,7 @@ input[type="text"] {
   width: 19px;
   height: 9px;
   position: absolute;
-  bottom: 99%;
+  bottom: 100%;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -369,9 +377,9 @@ input[type="text"] {
 }
 
 .range-wrapper-inputs {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 247px 242px;
+  gap: 88px;
   margin: 0 0 48px 0;
 }
 
@@ -469,6 +477,9 @@ input[type="text"] {
 .button-drop {
   background: none;
   cursor: pointer;
+  width: 191px;
+  min-height: 36px;
+  word-wrap: break-word;
 }
 
 .button-drop:hover {
@@ -477,7 +488,7 @@ input[type="text"] {
 }
 
 .button-drop:focus {
-  border: solid 3px #83B3D3;
+  outline: solid 3px #83B3D3;
 }
 
 .button-drop:active {
@@ -492,6 +503,7 @@ input[type="text"] {
 /* Button / size */
 
 .button-big {
+  font-family: inherit;
   color: white;
   font-size: 20px;
   line-height: 36px;
@@ -506,6 +518,7 @@ input[type="text"] {
 }
 
 .button-medium {
+  font-family: inherit;
   color: white;
   font-size: 16px;
   line-height: 20px;
@@ -522,6 +535,7 @@ input[type="text"] {
 }
 
 .button-small {
+  font-family: inherit;
   color: white;
   font-size: 16px;
   line-height: 20px;
@@ -553,6 +567,10 @@ input[type="text"] {
   padding: 8px 50px;
   cursor: pointer;
   background-color: #82B3D3;
+  min-width: 232px;
+  min-height: 52px;
+  display: inline-block;
+  word-wrap: break-word;
 }
 
 .subscription-form-button:hover,
@@ -604,6 +622,8 @@ input[type="text"] {
 
 .button-medium.primary-color-button {
   margin-top: 14px;
+  margin-bottom: 14px;
+
 }
 
 .icon {
@@ -746,13 +766,26 @@ input[type="text"] {
   height: 2px;
   background-color: rgba(0, 0, 0, 0.30);
 }
+.services-facts-list {
+  padding: 80px 85px;
+  text-align: center;
+  max-width: 400px;
+}
 
 .wrapper-block {
-  padding: 81px 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  text-align: center;
+  padding-top: 72px;
 }
 
 .wrapper-block h3 {
   margin: 30px 0 30px 0;
+  width: 230px;
+  word-break: break-word;
 }
 
 .card-block-reverse {
@@ -788,10 +821,16 @@ input[type="text"] {
 }
 
 .services-facts {
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 385px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
+  min-height: 385px;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper-block p {
   margin: 0;
   padding: 0;
 }
@@ -894,7 +933,7 @@ h2 {
 .subscription-form {
   display: flex;
   width: 684px;
-  height: 52px;
+  min-height: 52px;
   background-color: #F2F2F2;
   border-radius: 4px;
   text-decoration: none;
@@ -928,29 +967,26 @@ h2 {
 .subscription-background {
   background-color: gray;
   background-image: url("../images/Subscribe-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-.services-facts-list1::before {
-  content: url("../images/house.svg");
-  display: inline-block;
-  width: 75px;
-  height: 72px;
+.house-icon {
+  background-image: url("../images/house.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
-.services-facts-list2::before {
-  content: url("../images/food.svg");
-  display: inline-block;
-  width: 75px;
-  height: 72px;
+.food-icon {
+  background-image: url("../images/food.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
-.services-facts-list3::before {
-  content: url("../images/gift.svg");
-  display: inline-block;
-  width: 75px;
-  height: 72px;
+.gift-icon {
+  background-image: url("../images/gift.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .footer {
@@ -987,7 +1023,7 @@ h2 {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  min-width: 200px;
+  max-width: 200px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1103,6 +1139,13 @@ h4 {
   margin: 0 10px 0 10px;
 }
 
+.breadcrumbs-link-hotels {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
 .filter {
   color: white;
   background-color: gray;
@@ -1170,7 +1213,7 @@ h4 {
     "field-to";
   grid-template-columns: 143px 143px;
   grid-template-rows: 48px;
-  margin: 0 0 0 140px;
+  margin: 0 0 0 151px;
   padding: 0;
   border: none;
   gap: 2px;
@@ -1198,13 +1241,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .toggle-adults {
   display: flex;
-  flex-grow: 1;
   align-items: center;
+  justify-content: center;
 }
 
 .toggle-kids {
   display: flex;
-  margin-left: auto;
+  margin: 0;
   justify-content: center;
   align-items: center;
 }
@@ -1328,14 +1371,14 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  margin-top: 36px;
   width: 287px;
 }
 
 .range-scale {
   position: relative;
   height: 4px;
-  margin-bottom: 16px;
+  margin: 0;
   background-color: rgba(255, 255, 255, 0.3);
   width: 287px;
 }
@@ -1366,7 +1409,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .toggle-max {
   top: -8px;
-  right: 0;
+  right: -1px;
 }
 
 
@@ -1419,6 +1462,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .control-label {
   margin-left: 36px;
+  cursor: pointer;
 }
 
 .control-label:hover {
@@ -1542,6 +1586,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .catalog-price-buttons .secondary-color-button {
   margin-bottom: 32px;
+  width: 191px;
+  min-height: 36px;
+  word-wrap: break-word;
 }
 
 .filter-header {
@@ -1795,7 +1842,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .pagination {
   display: flex;
-  margin: 78px 0 0 0;
+  margin: 80px 0 0 0;
   padding: 0;
   list-style-type: none;
   min-width: 400px;
