@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="page-container">
-  <header class="header-container page-header">
+  <header class="header-container page-header" data-test="header">
     <nav class="navigation">
       <div class="logo-container">
         <a class="logo-container" href="index.html"><img class="logo" src="images/logo.svg" width="140" height="70"
@@ -44,8 +44,8 @@
       </div>
     </nav>
   </header>
-  <main class="main-inner main-container">
-    <section class="filter">
+  <main class="main-inner main-container" data-test="main">
+    <section class="filter" data-test="filter">
       <div class="filter-header">
         <h1 class="h1-filter">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -136,7 +136,7 @@
         </div>
       </form>
     </section>
-    <section class="filter-results">
+    <section class="filter-results" data-test="catalog">
       <header class="inner-header">
         <h2 class="inner-header-title">Найдено гостиниц: 38</h2>
         <div class="sorting">
@@ -248,7 +248,7 @@
         </li>
       </ol>
     </section>
-    <section class="subscription-catalog">
+    <section class="subscription-catalog" data-test="subscribe">
       <div class="wrapper3">
         <h2>Подпишитесь на рассылку</h2>
         <p class="subheadline3">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -259,7 +259,7 @@
       </form>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer" data-test="footer">
     <div class="footer-container">
       <section class="footer-social social">
         <h3 class="visually-hidden">Социальные сети</h3>
