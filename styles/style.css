@@ -1548,20 +1548,25 @@ h4 {
   width: 292px;
   height: 49px;
   border-radius: 4px;
+
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   font-weight: normal;
   color: #333333;
+
   box-sizing: border-box;
   padding: 0 0 0 20px;
   background-color: #ffffff;
   border: solid 2px #E5E5E5;
   -webkit-appearance: none;
   margin-right: 70px;
-  position: inherit;
   appearance: none;
   cursor: pointer;
+
+  background-image: url("../images/select_control_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
 
 .select-control:hover {
@@ -1575,17 +1580,6 @@ h4 {
 .select-control:disabled {
   border: 2px solid rgba(0, 0, 0, 0.30);
   color: rgba(0, 0, 0, 0.3);
-}
-
-.sorting::after {
-  background-image: url("../images/select_control_arrow.svg");
-  background-repeat: no-repeat;
-  content: "";
-  left: 260px;
-  top: 20px;
-  width: 12px;
-  height: 8px;
-  position: absolute;
 }
 
 .catalog-price-buttons {
@@ -1608,29 +1602,35 @@ h4 {
 
 .inner-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0 0 40px 0;
+  min-height: 48px;
 }
 
 .inner-header-title {
   margin-right: auto;
+  max-width: 500px;
+  word-wrap: break-word;
+  text-align: left;
 }
 
 .sorting {
   display: flex;
+  flex-wrap: wrap;
   width: 522px;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .sorting-buttons {
   display: flex;
+  flex-wrap: wrap;
   width: 160px;
-  height: 48px;
+  min-height: 48px;
   position: relative;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .filter-results {
@@ -1649,6 +1649,7 @@ h4 {
 
 .hotels-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   border: solid #E6E6E6 1px;
   border-radius: 4px;
@@ -1781,13 +1782,14 @@ h4 {
   position: absolute;
   right: 0;
   top: 0;
-  width: 140px;
-  height: 37px;
+  max-width: 140px;
+  min-height: 37px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   color: #333333;
   font-weight: 400;
+  word-wrap: break-word;
 }
 
 .wrapper-hotels-rate:first-of-type:before {
