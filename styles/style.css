@@ -615,10 +615,14 @@ input[type="text"] {
   max-width: 270px;
   margin-left: auto;
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 270px;
   align-items: center;
   list-style-type: none;
   padding: 0;
@@ -628,7 +632,6 @@ input[type="text"] {
 .button-medium.primary-color-button {
   margin-top: 14px;
   margin-bottom: 14px;
-
 }
 
 .icon {
@@ -830,7 +833,7 @@ input[type="text"] {
 .services-facts {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   list-style-type: none;
   min-height: 385px;
   padding: 0;
@@ -862,6 +865,7 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
   margin: 0;
+  word-wrap: break-word;
 }
 
 .wrapper {
