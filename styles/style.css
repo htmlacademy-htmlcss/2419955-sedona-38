@@ -172,7 +172,14 @@ body {
 }
 
 .modal-title {
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
   margin: 0;
+  margin-top: 0;
+  margin-left: 0;
   margin-bottom: 64px;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -230,7 +237,6 @@ body {
   -webkit-appearance: none;
   appearance: none;
 }
-
 
 .toggle-adults-headline {
   display: inline-block;
@@ -388,6 +394,10 @@ input[type="text"] {
   margin: 0 0 48px 0;
 }
 
+.modal-container-close {
+  display: none;
+}
+
 /* Button */
 
 /* Button / primary */
@@ -520,6 +530,8 @@ input[type="text"] {
   padding: 8px 50px;
   cursor: pointer;
   display: inline-block;
+  word-wrap: break-word;
+
 }
 
 .button-medium {
@@ -537,6 +549,7 @@ input[type="text"] {
   padding: 8px 34px;
   cursor: pointer;
   display: inline-block;
+  word-wrap: break-word;
 }
 
 .button-small {
@@ -548,12 +561,14 @@ input[type="text"] {
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
-  min-width: 140px;
-  padding: 8px 0;
+  width: 140px;
+  padding: 8px 16px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   display: inline-block;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 /* Subscription form button */
@@ -695,9 +710,9 @@ input[type="text"] {
   position: relative;
   color: black;
   padding: 51px 371px 82px 371px;
-  background-color: #E4F1FA;
+  background-color: #B0D2EA;
   background-image: url("../images/hero-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-top: -10px;
 }
@@ -749,14 +764,6 @@ input[type="text"] {
   margin-top: 30px;
   margin-bottom: 0;
   padding: 0;
-}
-
-.text-block-high h3 {
-  width: 175px;
-}
-
-.text-block h3 {
-  width: 175px;
 }
 
 .advantages-facts-headline-bright h3::after {
@@ -823,11 +830,35 @@ input[type="text"] {
   padding: 0;
 }
 
-.advantages-facts-list:first-child, .advantages-facts-list:last-child {
+.advantages-facts-list:first-child,
+.advantages-facts-list:last-child {
   display: flex;
   flex-direction: row;
   padding: 0;
   grid-column: 1/-1;
+}
+
+.advantage-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-facts-list:nth-child(even)
+.advantage-item-wrapper {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-facts-list:nth-child(odd)
+.advantage-item-wrapper {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-facts-list:first-child
+.advantage-item-wrapper,
+.advantages-facts-list:last-child
+.advantage-item-wrapper {
+  background-color: #82b3d3;
+  color: white;
 }
 
 .services-facts {
@@ -845,7 +876,7 @@ input[type="text"] {
   padding: 0;
 }
 
-h3 {
+.title-3 {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -855,9 +886,10 @@ h3 {
   text-align: center;
   margin: 0;
   padding: 0;
+  max-width: 175px;
 }
 
-h2 {
+.title-2 {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -976,7 +1008,7 @@ h2 {
 }
 
 .subscription-background {
-  background-color: gray;
+  background-color: #B0D2EA;
   background-image: url("../images/Subscribe-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1101,7 +1133,7 @@ h2 {
 
 /* Catalog */
 
-h1 {
+.title-1 {
   color: #ffffff;
   font-size: 60px;
   font-weight: 700;
@@ -1111,13 +1143,35 @@ h1 {
   padding: 0;
 }
 
-h4 {
+.catalog-filter-title h4 {
   padding: 0;
   margin: 0;
 }
 
 .navigation-user-item {
   position: relative;
+  padding: 22px 12px;
+}
+
+.navigation-user-item:hover {
+  opacity: 80%;
+}
+
+
+.navigation-user-link:hover svg {
+  fill: #433027;
+}
+
+.navigation-user-link:focus svg {
+  fill: #433027;
+}
+
+.navigation-user-link-favourite:hover svg{
+  fill: #433027;
+}
+
+.navigation-user-link-favourite:focus svg{
+  fill: #433027;
 }
 
 .navigation-user-link-favourite:after {
@@ -1159,9 +1213,9 @@ h4 {
 }
 .filter {
   color: white;
-  background-color: gray;
+  background-color: #B0D2EA;
   background-image: url("../images/filtr-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 35px 70px 70px 70px;
   margin-top: -10px;
@@ -1416,9 +1470,17 @@ h4 {
   left: 0;
 }
 
+.toggle-min:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.7);
+}
+
 .toggle-max {
   top: -8px;
   right: -1px;
+}
+
+.toggle-max:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -1503,12 +1565,6 @@ h4 {
   -webkit-appearance: none;
 }
 
-.control:focus .control-mark {
-  border: solid 3px #83B3D3;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  -webkit-appearance: none;
-}
-
 .control:active .control-mark {
   border: solid 2px #83B3D3;
   box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.40);
@@ -1542,6 +1598,10 @@ h4 {
   background-image: url("../images/radio-checked.svg");
   background-repeat: no-repeat;
   content: "";
+}
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83b3d3;
 }
 
 .select-control {
@@ -1610,9 +1670,18 @@ h4 {
 
 .inner-header-title {
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   max-width: 500px;
   word-wrap: break-word;
   text-align: left;
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
 }
 
 .sorting {
@@ -1680,9 +1749,10 @@ h4 {
 }
 
 .wrapper-hotels-rate {
-  display: flex;
-  padding: 0;
-  position: relative;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 20px;
+  min-height: 37px;
 }
 
 .hotels-list:last-child:after {
@@ -1698,9 +1768,11 @@ h4 {
 }
 
 .wrapper-buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: 140px 140px;
   margin-bottom: 16px;
   gap: 20px;
+  min-height: 36px;
 }
 
 .price {
@@ -1779,7 +1851,6 @@ h4 {
   min-width: 140px;
   text-transform: uppercase;
   border-radius: 4px;
-  position: absolute;
   right: 0;
   top: 0;
   max-width: 140px;
@@ -1790,6 +1861,8 @@ h4 {
   color: #333333;
   font-weight: 400;
   word-wrap: break-word;
+  padding: 9px 20px 8px 20px;
+  box-sizing: border-box;
 }
 
 .wrapper-hotels-rate:first-of-type:before {
@@ -1853,6 +1926,7 @@ h4 {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 80px 0 0 0;
   padding: 0;
   list-style-type: none;
