@@ -992,6 +992,7 @@ input[type="text"] {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
+  background-color: #F2F2F2;
 }
 
 .subscription-form button-big {
@@ -1989,10 +1990,6 @@ input[type="text"] {
 
 .pagination-list-more {
   background: none;
-}
-
-input {
-  background-color: #F2F2F2;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
